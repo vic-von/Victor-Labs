@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+    name="description"
+    content="Victor Labs — a digital workshop for software, AI, automation, web development and experimental technology."
+>
+
+<meta
+    name="keywords"
+    content="Victor Labs, software development, AI, automation, web development, technology, digital systems"
+>
+
+<meta name="author" content="Victor Labs">
+
+<meta
+    name="theme-color"
+    content="#05060a"
+>
+
+<meta property="og:title" content="Victor Labs — Building What's Next">
+
+<meta
+    property="og:description"
+    content="Software, AI, automation and experimental digital systems."
+>
+
+<meta property="og:type" content="website">
+
+<meta property="og:site_name" content="Victor Labs">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Victor Labs — Building What's Next">
+<meta
+    name="twitter:description"
+    content="Software, AI, automation and experimental digital systems."
+>
+
+    <title>Victor Labs — Building What's Next</title>
+       
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         LOADER
+    ========================== -->
+
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-mark">&lt;/&gt;</div>
+
+            <div class="loader-line">
+                <span></span>
+            </div>
+
+            <div class="loader-meta">
+                <span>VICTOR LABS</span>
+                <span id="loader-percent">00%</span>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =========================
+         BACKGROUND
+    ========================== -->
+
+    <div class="background" aria-hidden="true">
+        <div class="background-grid"></div>
+        <div class="background-noise"></div>
+
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+    </div>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-glow"></div>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <a href="#home" class="brand">
+
+            <span class="brand-mark">&lt;/&gt;</span>
+
+            <span class="brand-name">
+                VICTOR<span>LABS</span>
+            </span>
+
+        </a>
+
+
+        <nav class="desktop-nav">
+
+            <a href="#home" class="nav-link active">
+                <span>01</span>
+                Home
+            </a>
+
+            <a href="#about" class="nav-link">
+                <span>02</span>
+                About
+            </a>
+
+            <a href="#stack" class="nav-link">
+                <span>03</span>
+                Stack
+            </a>
+
+            <a href="#projects" class="nav-link">
+                <span>04</span>
+                Projects
+            </a>
+
+            <a href="#contact" class="nav-link">
+                <span>05</span>
+                Contact
+            </a>
+
+        </nav>
+
+
+        <a href="#contact" class="nav-connect">
+            Let's talk
+            <span>↗</span>
+        </a>
+
+
+        <button
+            class="menu-button"
+            id="menu-button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <!-- =========================
+         MOBILE NAV
+    ========================== -->
+
+    <div class="mobile-menu" id="mobile-menu">
+
+        <div class="mobile-menu-top">
+            <span>NAVIGATION</span>
+            <span>V/L</span>
+        </div>
+
+        <a href="#home">
+            <span>01</span>
+            Home
+        </a>
+
+        <a href="#about">
+            <span>02</span>
+            About
+        </a>
+
+        <a href="#stack">
+            <span>03</span>
+            Stack
+        </a>
+
+        <a href="#projects">
+            <span>04</span>
+            Projects
+        </a>
+
+        <a href="#contact">
+            <span>05</span>
+            Contact
+        </a>
+
+    </div>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-left">
+
+                <div class="eyebrow reveal">
+
+                    <span class="eyebrow-line"></span>
+
+                    <span>INDEPENDENT TECHNOLOGY LAB</span>
+
+                    <span class="eyebrow-status">
+                        <i></i>
+                        ONLINE
+                    </span>
+
+                </div>
+
+
+                <h1 class="hero-title">
+
+                    <span class="hero-line">
+                        BUILDING
+                    </span>
+
+                    <span class="hero-line hero-outline">
+                        WHAT'S
+                    </span>
+
+                    <span class="hero-line">
+                        NEXT<span class="hero-dot">.</span>
+                    </span>
+
+                </h1>
+
+
+                <div class="hero-bottom">
+
+                    <p class="hero-description">
+                        Victor Labs is a space for turning ideas into
+                        software, experiments and digital systems.
+                        No fixed roadmap. Just things worth building.
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#projects"
+                            class="button button-primary magnetic"
+                        >
+                            <span>Explore the lab</span>
+                            <span class="button-arrow">↗</span>
+                        </a>
+
+                        <a
+                            href="#about"
+                            class="button button-ghost magnetic"
+                        >
+                            <span>More about Victor Labs</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO VISUAL -->
+
+            <div class="hero-right">
+
+                <div class="hero-system">
+
+                    <div class="system-label system-label-top">
+                        <span>CORE / 001</span>
+                        <span>ACTIVE</span>
+                    </div>
+
+
+                    <div class="system-orbit orbit-a"></div>
+                    <div class="system-orbit orbit-b"></div>
+                    <div class="system-orbit orbit-c"></div>
+
+
+                    <div class="system-core">
+
+                        <div class="core-ring core-ring-one"></div>
+                        <div class="core-ring core-ring-two"></div>
+
+                        <div class="core-center">
+
+                            <div class="core-symbol">
+                                &lt;/&gt;
+                            </div>
+
+                            <div class="core-pulse"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="system-node node-one">
+                        <span>AI</span>
+                    </div>
+
+                    <div class="system-node node-two">
+                        <span>WEB</span>
+                    </div>
+
+                    <div class="system-node node-three">
+                        <span>AUTO</span>
+                    </div>
+
+
+                    <div class="system-data data-one">
+                        <span>PROCESS</span>
+                        <strong>98.4%</strong>
+                    </div>
+
+                    <div class="system-data data-two">
+                        <span>BUILD</span>
+                        <strong>READY</strong>
+                    </div>
+
+
+                    <div class="system-label system-label-bottom">
+                        <span>V/L SYSTEM</span>
+                        <span>v2.0.26</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-scroll">
+                <span class="scroll-line"></span>
+                <span>SCROLL TO EXPLORE</span>
+            </div>
+
+
+            <div class="hero-index">
+                001 / 005
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MARQUEE
+        ========================== -->
+
+        <div class="marquee">
+
+            <div class="marquee-track">
+
+                <span>SOFTWARE</span>
+                <i>✦</i>
+
+                <span>AI</span>
+                <i>✦</i>
+
+                <span>AUTOMATION</span>
+                <i>✦</i>
+
+                <span>WEB</span>
+                <i>✦</i>
+
+                <span>EXPERIMENTS</span>
+                <i>✦</i>
+
+                <span>DIGITAL SYSTEMS</span>
+                <i>✦</i>
+
+                <span>SOFTWARE</span>
+                <i>✦</i>
+
+                <span>AI</span>
+                <i>✦</i>
+
+                <span>AUTOMATION</span>
+                <i>✦</i>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section class="section about-section" id="about">
+
+            <div class="section-top">
+
+                <div class="section-number">
+                    02
+                </div>
+
+                <div class="section-label">
+                    ABOUT THE LAB
+                </div>
+
+            </div>
+
+
+            <div class="about-intro">
+
+                <h2>
+                    NOT A COMPANY.
+                    <span>A WORKBENCH.</span>
+                </h2>
+
+                <div class="about-intro-copy">
+
+                    <p>
+                        Victor Labs is an independent space for
+                        building things that don't necessarily
+                        have a category yet.
+                    </p>
+
+                    <p>
+                        Some ideas become products. Some become
+                        experiments. Some simply teach us what
+                        to build next.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="about-card about-card-large">
+
+                    <span class="card-index">01</span>
+
+                    <div class="about-card-icon">
+                        +
+                    </div>
+
+                    <h3>
+                        Curiosity
+                    </h3>
+
+                    <p>
+                        Start with a question. Follow it until
+                        something interesting appears.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <span class="card-index">02</span>
+
+                    <div class="about-card-icon">
+                        →
+                    </div>
+
+                    <h3>
+                        Build
+                    </h3>
+
+                    <p>
+                        Ideas become useful when they leave
+                        the notebook.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <span class="card-index">03</span>
+
+                    <div class="about-card-icon">
+                        ∞
+                    </div>
+
+                    <h3>
+                        Iterate
+                    </h3>
+
+                    <p>
+                        Break things. Learn. Improve.
+                        Repeat.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             STACK
+        ========================== -->
+
+        <section class="section stack-section" id="stack">
+
+            <div class="section-top">
+
+                <div class="section-number">
+                    03
+                </div>
+
+                <div class="section-label">
+                    THE STACK
+                </div>
+
+            </div>
+
+
+            <div class="section-heading-row">
+
+                <h2>
+                    TOOLS FOR
+                    <span>MAKING.</span>
+                </h2>
+
+                <p>
+                    The stack changes with the problem.
+                    These are the tools currently inside
+                    the lab.
+                </p>
+
+            </div>
+
+
+            <div class="stack-list">
+
+                <article class="stack-item">
+
+                    <div class="stack-number">
+                        01
+                    </div>
+
+                    <div class="stack-name">
+                        <span class="stack-icon">AI</span>
+                        Artificial Intelligence
+                    </div>
+
+                    <div class="stack-description">
+                        Intelligent systems, agents,
+                        automation and experiments.
+                    </div>
+
+                    <div class="stack-arrow">
+                        ↗
+                    </div>
+
+                </article>
+
+
+                <article class="stack-item">
+
+                    <div class="stack-number">
+                        02
+                    </div>
+
+                    <div class="stack-name">
+                        <span class="stack-icon">&lt;/&gt;</span>
+                        Web Development
+                    </div>
+
+                    <div class="stack-description">
+                        Interfaces, websites and interactive
+                        digital experiences.
+                    </div>
+
+                    <div class="stack-arrow">
+                        ↗
+                    </div>
+
+                </article>
+
+
+                <article class="stack-item">
+
+                    <div class="stack-number">
+                        03
+                    </div>
+
+                    <div class="stack-name">
+                        <span class="stack-icon">JS</span>
+                        JavaScript
+                    </div>
+
+                    <div class="stack-description">
+                        The logic layer behind interactive
+                        systems and experiments.
+                    </div>
+
+                    <div class="stack-arrow">
+                        ↗
+                    </div>
+
+                </article>
+
+
+                <article class="stack-item">
+
+                    <div class="stack-number">
+                        04
+                    </div>
+
+                    <div class="stack-name">
+                        <span class="stack-icon">C++</span>
+                        Systems
+                    </div>
+
+                    <div class="stack-description">
+                        Low-level thinking, performance and
+                        software fundamentals.
+                    </div>
+
+                    <div class="stack-arrow">
+                        ↗
+                    </div>
+
+                </article>
+
+
+                <article class="stack-item">
+
+                    <div class="stack-number">
+                        05
+                    </div>
+
+                    <div class="stack-name">
+                        <span class="stack-icon">⚡</span>
+                        Automation
+                    </div>
+
+                    <div class="stack-description">
+                        Connecting tools and removing
+                        unnecessary repetition.
+                    </div>
+
+                    <div class="stack-arrow">
+                        ↗
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TERMINAL
+        ========================== -->
+
+        <section class="section terminal-section">
+
+            <div class="section-top">
+
+                <div class="section-number">
+                    03.5
+                </div>
+
+                <div class="section-label">
+                    SYSTEM ACCESS
+                </div>
+
+            </div>
+
+
+            <div class="terminal-window">
+
+                <div class="terminal-top">
+
+                    <div class="terminal-controls">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="terminal-title">
+                        victor@labs
+                    </div>
+
+                    <div class="terminal-status">
+                        ● ONLINE
+                    </div>
+
+                </div>
+
+
+                <div class="terminal-content" id="terminal-content">
+
+                    <div class="terminal-line">
+                        <span class="terminal-green">
+                            victor@labs
+                        </span>:<span class="terminal-blue">~</span>$
+                        <span>help</span>
+                    </div>
+
+                    <div class="terminal-response">
+                        Available commands:
+                    </div>
+
+                    <div class="terminal-command-list">
+
+                        <span>
+                            <b>about</b>
+                            — learn about the lab
+                        </span>
+
+                        <span>
+                            <b>projects</b>
+                            — inspect experiments
+                        </span>
+
+                        <span>
+                            <b>stack</b>
+                            — view technologies
+                        </span>
+
+                        <span>
+                            <b>contact</b>
+                            — start a conversation
+                        </span>
+
+                        <span>
+                            <b>clear</b>
+                            — clear terminal
+                        </span>
+
+                    </div>
+
+                    <div class="terminal-input-row">
+
+                        <span class="terminal-green">
+                            victor@labs
+                        </span>:<span class="terminal-blue">~</span>$
+
+                        <input
+                            type="text"
+                            id="terminal-input"
+                            autocomplete="off"
+                            spellcheck="false"
+                            aria-label="Terminal command"
+                        >
+
+                        <span class="terminal-cursor"></span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
+        <section class="section projects-section" id="projects">
+
+            <div class="section-top">
+
+                <div class="section-number">
+                    04
+                </div>
+
+                <div class="section-label">
+                    SELECTED WORK
+                </div>
+
+            </div>
+
+
+            <div class="section-heading-row">
+
+                <h2>
+                    THINGS
+                    <span>BUILT.</span>
+                </h2>
+
+                <p>
+                    A growing collection of projects,
+                    prototypes and experiments from
+                    the lab.
+                </p>
+
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <!-- Project 01 -->
+
+                <article class="project project-featured">
+
+                    <div class="project-visual visual-one">
+
+                        <div class="visual-grid"></div>
+
+                        <div class="visual-orb"></div>
+
+                        <div class="visual-code">
+
+                            <span>01</span>
+
+                            <div>
+                                SYSTEM
+                            </div>
+
+                            <div>
+                                INITIALIZING...
+                            </div>
+
+                            <strong>
+                                READY_
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <div class="project-meta">
+                            <span>EXPERIMENT 001</span>
+                            <span>ACTIVE</span>
+                        </div>
+
+                        <h3>
+                            Future Systems
+                        </h3>
+
+                        <p>
+                            An experimental environment for
+                            exploring software, intelligence
+                            and digital systems.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>AI</span>
+                            <span>WEB</span>
+                            <span>EXPERIMENTAL</span>
+                        </div>
+
+                        <button
+                            class="project-button"
+                            data-project="future"
+                        >
+                            Inspect project
+                            <span>↗</span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Project 02 -->
+
+                <article class="project">
+
+                    <div class="project-visual visual-two">
+
+                        <div class="automation-lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="automation-core">
+                            ⚡
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <div class="project-meta">
+                            <span>EXPERIMENT 002</span>
+                            <span>BUILDING</span>
+                        </div>
+
+                        <h3>
+                            Automation
+                        </h3>
+
+                        <p>
+                            Small systems that remove repetitive
+                            work and connect separate tools.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>JS</span>
+                            <span>AUTOMATION</span>
+                        </div>
+
+                        <button
+                            class="project-button"
+                            data-project="automation"
+                        >
+                            Inspect project
+                            <span>↗</span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Project 03 -->
+
+                <article class="project">
+
+                    <div class="project-visual visual-three">
+
+                        <div class="interface-window">
+
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-info">
+
+                        <div class="project-meta">
+                            <span>EXPERIMENT 003</span>
+                            <span>CONCEPT</span>
+                        </div>
+
+                        <h3>
+                            Digital Space
+                        </h3>
+
+                        <p>
+                            Interfaces designed around interaction,
+                            motion and atmosphere.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>UI</span>
+                            <span>WEB</span>
+                            <span>UX</span>
+                        </div>
+
+                        <button
+                            class="project-button"
+                            data-project="digital"
+                        >
+                            Inspect project
+                            <span>↗</span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LAB STATUS
+        ========================== -->
+
+        <section class="section lab-section">
+
+            <div class="lab-panel">
+
+                <div class="lab-header">
+
+                    <div>
+                        <span class="section-label">
+                            CURRENT LAB STATUS
+                        </span>
+
+                        <h2>
+                            STILL <span>BUILDING.</span>
+                        </h2>
+                    </div>
+
+                    <div class="lab-live">
+                        <i></i>
+                        LIVE
+                    </div>
+
+                </div>
+
+
+                <div class="lab-status-grid">
+
+                    <div class="lab-status-item">
+
+                        <span>CURRENT FOCUS</span>
+
+                        <strong>
+                            Intelligent systems
+                        </strong>
+
+                    </div>
+
+
+                    <div class="lab-status-item">
+
+                        <span>ACTIVE EXPERIMENTS</span>
+
+                        <strong>
+                            03
+                        </strong>
+
+                    </div>
+
+
+                    <div class="lab-status-item">
+
+                        <span>IDEAS IN QUEUE</span>
+
+                        <strong>
+                            07
+                        </strong>
+
+                    </div>
+
+
+                    <div class="lab-status-item">
+
+                        <span>SYSTEM</span>
+
+                        <strong>
+                            OPERATIONAL
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="lab-progress">
+
+                    <div class="progress-label">
+                        <span>BUILD CYCLE</span>
+                        <span>72%</span>
+                    </div>
+
+                    <div class="progress-track">
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section class="section contact-section" id="contact">
+
+            <div class="contact-wrap">
+
+                <div class="section-top">
+
+                    <div class="section-number">
+                        05
+                    </div>
+
+                    <div class="section-label">
+                        CONTACT
+                    </div>
+
+                </div>
+
+
+                <h2>
+                    HAVE SOMETHING
+                    <span>WORTH BUILDING?</span>
+                </h2>
+
+
+                <p>
+                    Ideas, collaborations, experiments or just
+                    a good conversation about technology.
+                </p>
+
+
+                <div class="contact-actions">
+
+                    <a
+                        href="mailto:victorchaloh802j@gmail.com"
+                        class="button button-primary magnetic"
+                    >
+                        <span>victorchaloh802j@gmail.com</span>
+                        <span>↗</span>
+                    </a>
+
+                    <button
+                        class="copy-email magnetic"
+                        id="copy-email"
+                    >
+                        Copy email
+                    </button>
+
+                </div>
+
+
+                <div class="contact-foot">
+
+                    <span>
+                        RESPONSE CHANNEL: EMAIL
+                    </span>
+
+                    <span>
+                        AVAILABLE FOR NEW IDEAS
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PROJECT MODAL
+    ========================== -->
+
+    <div
+        class="project-modal"
+        id="project-modal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal">
+
+            <button
+                class="modal-close"
+                id="modal-close"
+                aria-label="Close project"
+            >
+                ×
+            </button>
+
+            <div class="modal-number">
+                EXPERIMENT
+            </div>
+
+            <h2 id="modal-title">
+                Project
+            </h2>
+
+            <p id="modal-description">
+                Project description.
+            </p>
+
+            <div
+                class="modal-tech"
+                id="modal-tech"
+            ></div>
+
+            <div class="modal-footer">
+
+                <span id="modal-status">
+                    STATUS
+                </span>
+
+                <span>
+                    VICTOR LABS
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-top">
+
+            <a href="#home" class="brand">
+
+                <span class="brand-mark">&lt;/&gt;</span>
+
+                <span class="brand-name">
+                    VICTOR<span>LABS</span>
+                </span>
+
+            </a>
+
+
+            <div class="footer-links">
+
+                <a href="#about">About</a>
+                <a href="#stack">Stack</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Victor Labs
+            </span>
+
+            <span>
+                BUILDING WHAT'S NEXT.
+            </span>
+
+            <span>
+                ALL SYSTEMS OPERATIONAL
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

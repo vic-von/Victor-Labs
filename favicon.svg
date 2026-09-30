@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#05060a"/>
+
+  <!-- V monogram -->
+  <path
+    d="M25 25
+       H42
+       L64 78
+       L86 25
+       H103
+       L72 99
+       H56
+       Z"
+    fill="none"
+    stroke="#F4F4F5"
+    stroke-width="10"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+  />
+
+  <!-- Distinctive central break -->
+  <path
+    d="M56 99
+       L64 80
+       L72 99"
+    fill="#8178FF"
+  />
+</svg>
