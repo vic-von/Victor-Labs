@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Terms of Use — Victor Labs</title>
+
+    <meta
+        name="description"
+        content="Terms of Use for Victor Labs."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="favicon.svg"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #05060a;
+            color: #e8e9ee;
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .legal-page {
+            min-height: 100vh;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-grid {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .4;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,.025) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.025) 1px,
+                    transparent 1px
+                );
+
+            background-size: 55px 55px;
+
+            mask-image: linear-gradient(
+                to bottom,
+                black,
+                transparent 90%
+            );
+        }
+
+        .legal-container {
+            position: relative;
+            z-index: 2;
+
+            width: min(900px, 100%);
+            margin: 0 auto;
+        }
+
+        .legal-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            padding: 18px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,.08);
+
+            font-family: "DM Mono", monospace;
+            font-size: 9px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+
+            color: #5d626d;
+        }
+
+        .legal-top a {
+            color: #8178ff;
+            text-decoration: none;
+        }
+
+        .legal-top a:hover {
+            color: #ffffff;
+        }
+
+        .legal-header {
+            padding: 100px 0 75px;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .legal-label {
+            margin-bottom: 20px;
+
+            font-family: "DM Mono", monospace;
+            font-size: 10px;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+
+            color: #8178ff;
+        }
+
+        .legal-header h1 {
+            margin: 0;
+
+            font-size: clamp(55px, 9vw, 100px);
+            line-height: .88;
+            letter-spacing: -.065em;
+            font-weight: 500;
+
+            color: #f0f1f5;
+        }
+
+        .legal-header h1 span {
+            color: #8178ff;
+        }
+
+        .legal-date {
+            margin-top: 30px;
+
+            font-family: "DM Mono", monospace;
+            font-size: 9px;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+
+            color: #5d626d;
+        }
+
+        .legal-content {
+            padding: 65px 0 100px;
+        }
+
+        .legal-section {
+            padding: 35px 0;
+            border-bottom: 1px solid rgba(255,255,255,.06);
+        }
+
+        .legal-section:first-child {
+            padding-top: 0;
+        }
+
+        .legal-section:last-child {
+            border-bottom: none;
+        }
+
+        .legal-section h2 {
+            margin: 0 0 18px;
+
+            font-size: 24px;
+            line-height: 1.1;
+            letter-spacing: -.03em;
+            font-weight: 500;
+
+            color: #e7e8ee;
+        }
+
+        .legal-section p {
+            max-width: 760px;
+            margin: 0 0 16px;
+
+            font-size: 14px;
+            line-height: 1.9;
+
+            color: #858a96;
+        }
+
+        .legal-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section ul {
+            max-width: 760px;
+            margin: 0;
+            padding-left: 22px;
+
+            color: #858a96;
+        }
+
+        .legal-section li {
+            margin-bottom: 10px;
+
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .legal-section strong {
+            color: #c7c9d1;
+            font-weight: 500;
+        }
+
+        .legal-section a {
+            color: #a19aff;
+            text-decoration: none;
+        }
+
+        .legal-section a:hover {
+            color: #ffffff;
+        }
+
+        .legal-footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            padding: 20px 0;
+
+            border-top: 1px solid rgba(255,255,255,.08);
+
+            font-family: "DM Mono", monospace;
+            font-size: 9px;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+
+            color: #50545e;
+        }
+
+        @media (max-width: 700px) {
+
+            .legal-page {
+                padding: 15px;
+            }
+
+            .legal-header {
+                padding: 70px 0 55px;
+            }
+
+            .legal-content {
+                padding: 45px 0 70px;
+            }
+
+            .legal-section {
+                padding: 28px 0;
+            }
+
+            .legal-section h2 {
+                font-size: 21px;
+            }
+
+            .legal-section p,
+            .legal-section li {
+                font-size: 13px;
+            }
+
+            .legal-footer {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="legal-page">
+
+        <div class="legal-grid"></div>
+
+
+        <div class="legal-container">
+
+
+            <div class="legal-top">
+
+                <a href="index.html">
+                    ← VICTOR LABS
+                </a>
+
+                <span>
+                    LEGAL / 001
+                </span>
+
+            </div>
+
+
+            <header class="legal-header">
+
+                <div class="legal-label">
+                    VICTOR LABS / LEGAL
+                </div>
+
+                <h1>
+                    TERMS OF
+                    <span>USE.</span>
+                </h1>
+
+                <div class="legal-date">
+                    LAST UPDATED: OCTOBER 2026
+                </div>
+
+            </header>
+
+
+            <main class="legal-content">
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        01. Acceptance of Terms
+                    </h2>
+
+                    <p>
+                        By accessing or using Victor Labs, you
+                        acknowledge that you have read, understood
+                        and agreed to these Terms of Use.
+                    </p>
+
+                    <p>
+                        If you do not agree with these terms, please
+                        do not use the website.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        02. About Victor Labs
+                    </h2>
+
+                    <p>
+                        Victor Labs is an independent technology
+                        laboratory and digital workspace focused
+                        on software, web development, automation,
+                        artificial intelligence and experimental
+                        digital systems.
+                    </p>
+
+                    <p>
+                        Content presented on this website may include
+                        projects, prototypes, experiments, concepts,
+                        development notes and technical information.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        03. Website Use
+                    </h2>
+
+                    <p>
+                        You may access and use this website for
+                        lawful purposes and in accordance with
+                        these Terms.
+                    </p>
+
+                    <p>
+                        You agree not to use the website in a way
+                        that could damage, disable, overburden or
+                        interfere with its operation or security.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        04. Intellectual Property
+                    </h2>
+
+                    <p>
+                        Unless otherwise stated, the original
+                        content, visual design, branding, code,
+                        graphics, text and other materials presented
+                        on Victor Labs are owned by or used by
+                        Victor Labs and are protected by applicable
+                        intellectual-property laws.
+                    </p>
+
+                    <p>
+                        You may not reproduce, redistribute,
+                        modify or commercially exploit website
+                        materials without appropriate permission,
+                        unless permitted by applicable law.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        05. Projects and Experiments
+                    </h2>
+
+                    <p>
+                        Projects and experiments displayed on Victor
+                        Labs may be prototypes, demonstrations,
+                        concepts or works in progress.
+                    </p>
+
+                    <p>
+                        Their availability, functionality and
+                        descriptions may change without notice.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        06. External Links
+                    </h2>
+
+                    <p>
+                        Victor Labs may contain links to third-party
+                        websites, services or platforms.
+                    </p>
+
+                    <p>
+                        Victor Labs does not control those external
+                        services and is not responsible for their
+                        content, availability or privacy practices.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        07. No Warranty
+                    </h2>
+
+                    <p>
+                        The website and its content are provided
+                        on an "as available" basis.
+                    </p>
+
+                    <p>
+                        While reasonable efforts may be made to
+                        maintain accurate and reliable information,
+                        Victor Labs does not guarantee that the
+                        website will always be available, complete,
+                        accurate or free from errors.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        08. Limitation of Liability
+                    </h2>
+
+                    <p>
+                        To the extent permitted by applicable law,
+                        Victor Labs shall not be responsible for
+                        losses or damages arising from your use of,
+                        or inability to use, the website or its
+                        content.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        09. Changes to These Terms
+                    </h2>
+
+                    <p>
+                        These Terms of Use may be updated from time
+                        to time as Victor Labs develops or changes.
+                    </p>
+
+                    <p>
+                        The updated version will be published on
+                        this page with a revised update date.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        10. Contact
+                    </h2>
+
+                    <p>
+                        Questions regarding these Terms of Use can
+                        be sent to:
+                    </p>
+
+                    <p>
+                        <a href="mailto:victorchaloh802@gmail.com">
+                            victorchaloh802@gmail.com
+                        </a>
+                    </p>
+
+                </section>
+
+
+            </main>
+
+
+            <footer class="legal-footer">
+
+                <span>
+                    VICTOR LABS / TERMS OF USE
+                </span>
+
+                <span>
+                    © 2026 VICTOR LABS
+                </span>
+
+            </footer>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

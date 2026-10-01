@@ -208,9 +208,11 @@ button {
     border-radius: 50%;
     background: white;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 10001;
     transform: translate(-50%, -50%);
     mix-blend-mode: difference;
+    opacity: 1;
+    visibility: visible;
 }
 
 .cursor-glow {
@@ -219,7 +221,7 @@ button {
     height: 360px;
     border-radius: 50%;
     pointer-events: none;
-    z-index: -1;
+    z-index: 9998;
 
     background:
         radial-gradient(
@@ -229,6 +231,8 @@ button {
         );
 
     transform: translate(-50%, -50%);
+    opacity: 1;
+    visibility: visible;
 }
 
 
@@ -3518,6 +3522,484 @@ body.journal-open-active {
     .contact-mail-text {
         font-size: 9px;
         letter-spacing: .12em;
+    }
+
+}
+
+/* =========================================
+   VICTOR LABS — ACCESS AGREEMENT
+========================================= */
+
+.access-gate {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    overflow-y: auto;
+    background: #05060a;
+    color: #e8e9ee;
+}
+
+.access-gate.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        opacity .5s ease,
+        visibility .5s ease;
+}
+
+.access-gate-grid {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .45;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 55px 55px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 90%
+    );
+}
+
+.access-gate-noise {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .035;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+}
+
+.access-gate-panel {
+    position: relative;
+    z-index: 2;
+    width: min(760px, 100%);
+    border: 1px solid rgba(255,255,255,.09);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17,18,27,.96),
+            rgba(7,8,13,.98)
+        );
+    box-shadow:
+        0 35px 100px rgba(0,0,0,.55),
+        0 0 90px rgba(129,120,255,.045);
+}
+
+.access-gate-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 17px 22px;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #555a65;
+}
+
+.access-gate-top span:first-child {
+    color: #8178ff;
+}
+
+.access-gate-main {
+    padding: 65px 70px 60px;
+}
+
+.access-gate-label {
+    margin-bottom: 18px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+
+    color: #686d79;
+}
+
+.access-gate-main h1 {
+    max-width: 620px;
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(52px, 8vw, 88px);
+    line-height: .88;
+    letter-spacing: -.065em;
+    font-weight: 500;
+
+    color: #f0f1f5;
+}
+
+.access-gate-main h1 span {
+    color: #8178ff;
+}
+
+.access-gate-description {
+    max-width: 590px;
+    margin: 32px 0 0;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: #858a96;
+}
+
+.access-gate-documents {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 42px;
+
+    border-top: 1px solid rgba(255,255,255,.07);
+    border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.access-gate-documents a {
+    display: grid;
+    grid-template-columns: 35px 1fr auto;
+    align-items: center;
+    gap: 12px;
+
+    padding: 20px 18px;
+
+    color: #dfe0e6;
+    text-decoration: none;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+}
+
+.access-gate-documents a:first-child {
+    border-right: 1px solid rgba(255,255,255,.07);
+}
+
+.access-gate-documents a:hover {
+    background: rgba(129,120,255,.055);
+    color: #ffffff;
+}
+
+.access-gate-documents span {
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .1em;
+    color: #8178ff;
+}
+
+.access-gate-documents strong {
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: .15em;
+}
+
+.access-gate-documents i {
+    font-family: "DM Mono", monospace;
+    font-size: 15px;
+    font-style: normal;
+    color: #686d79;
+
+    transition:
+        transform .25s ease,
+        color .25s ease;
+}
+
+.access-gate-documents a:hover i {
+    color: #a19aff;
+    transform: translate(3px, -3px);
+}
+
+.access-gate-agreement {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    margin-top: 32px;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.access-gate-agreement input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.access-check {
+    position: relative;
+    flex: 0 0 auto;
+
+    width: 18px;
+    height: 18px;
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    background: rgba(255,255,255,.015);
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.access-gate-agreement input:checked + .access-check {
+    border-color: #8178ff;
+    background: #8178ff;
+    box-shadow: 0 0 18px rgba(129,120,255,.2);
+}
+
+.access-check::after {
+    content: "";
+
+    position: absolute;
+    left: 5px;
+    top: 2px;
+
+    width: 5px;
+    height: 9px;
+
+    border-right: 2px solid #05060a;
+    border-bottom: 2px solid #05060a;
+
+    transform: rotate(45deg) scale(0);
+    opacity: 0;
+
+    transition:
+        transform .2s ease,
+        opacity .2s ease;
+}
+
+.access-gate-agreement input:checked + .access-check::after {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+}
+
+.access-agreement-text {
+    max-width: 560px;
+
+    font-size: 12px;
+    line-height: 1.7;
+    color: #737883;
+}
+
+.access-agreement-text a {
+    color: #a19aff;
+    text-decoration: underline;
+    text-decoration-color: rgba(161,154,255,.3);
+    text-underline-offset: 3px;
+}
+
+.access-agreement-text a:hover {
+    color: #ffffff;
+}
+
+.access-enter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px 20px;
+
+    border: 1px solid rgba(129,120,255,.3);
+
+    background: rgba(129,120,255,.055);
+
+    color: #a19aff;
+
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.access-enter:disabled {
+    opacity: .35;
+    cursor: not-allowed;
+    border-color: rgba(255,255,255,.07);
+    background: rgba(255,255,255,.018);
+    color: #686d79;
+}
+
+.access-enter:not(:disabled):hover {
+    background: rgba(129,120,255,.12);
+    border-color: rgba(129,120,255,.55);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.access-enter i {
+    font-style: normal;
+    font-size: 17px;
+
+    transition: transform .25s ease;
+}
+
+.access-enter:not(:disabled):hover i {
+    transform: translateX(6px);
+}
+
+.access-gate-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 18px 22px;
+
+    border-top: 1px solid rgba(255,255,255,.07);
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+
+    color: #50545e;
+}
+
+
+/* =========================================
+   ACCESS GATE — MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .access-gate {
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .access-gate-panel {
+        margin: auto 0;
+    }
+
+    .access-gate-main {
+        padding: 45px 24px 38px;
+    }
+
+    .access-gate-main h1 {
+        font-size: clamp(48px, 15vw, 72px);
+    }
+
+    .access-gate-description {
+        margin-top: 25px;
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    .access-gate-documents {
+        grid-template-columns: 1fr;
+        margin-top: 32px;
+    }
+
+    .access-gate-documents a:first-child {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+
+    .access-gate-agreement {
+        margin-top: 26px;
+    }
+
+    .access-agreement-text {
+        font-size: 11px;
+    }
+
+    .access-gate-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}
+
+body.access-locked {
+    overflow: hidden;
+}
+
+/* =========================================
+   FOOTER — LEGAL LINKS
+========================================= */
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 18px 0;
+
+    border-top: 1px solid rgba(255,255,255,.06);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+
+    color: #555a65;
+}
+
+.footer-legal > div {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-legal a {
+    color: #686d79;
+    text-decoration: none;
+
+    transition:
+        color .25s ease,
+        letter-spacing .25s ease;
+}
+
+.footer-legal a:hover {
+    color: #a19aff;
+    letter-spacing: .17em;
+}
+
+
+@media (max-width: 750px) {
+
+    .footer-legal {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-legal > div {
+        flex-wrap: wrap;
+        gap: 18px;
     }
 
 }

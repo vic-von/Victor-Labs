@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Privacy Policy — Victor Labs</title>
+
+    <meta
+        name="description"
+        content="Privacy Policy for Victor Labs."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="favicon.svg"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #05060a;
+            color: #e8e9ee;
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .legal-page {
+            min-height: 100vh;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-grid {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .4;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,.025) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.025) 1px,
+                    transparent 1px
+                );
+
+            background-size: 55px 55px;
+
+            mask-image: linear-gradient(
+                to bottom,
+                black,
+                transparent 90%
+            );
+        }
+
+        .legal-container {
+            position: relative;
+            z-index: 2;
+
+            width: min(900px, 100%);
+            margin: 0 auto;
+        }
+
+        .legal-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            padding: 18px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,.08);
+
+            font-family: "DM Mono", monospace;
+            font-size: 9px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+
+            color: #5d626d;
+        }
+
+        .legal-top a {
+            color: #8178ff;
+            text-decoration: none;
+        }
+
+        .legal-top a:hover {
+            color: #ffffff;
+        }
+
+        .legal-header {
+            padding: 100px 0 75px;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .legal-label {
+            margin-bottom: 20px;
+
+            font-family: "DM Mono", monospace;
+            font-size: 10px;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+
+            color: #8178ff;
+        }
+
+        .legal-header h1 {
+            margin: 0;
+
+            font-size: clamp(55px, 9vw, 100px);
+            line-height: .88;
+            letter-spacing: -.065em;
+            font-weight: 500;
+
+            color: #f0f1f5;
+        }
+
+        .legal-header h1 span {
+            color: #8178ff;
+        }
+
+        .legal-date {
+            margin-top: 30px;
+
+            font-family: "DM Mono", monospace;
+            font-size: 9px;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+
+            color: #5d626d;
+        }
+
+        .legal-content {
+            padding: 65px 0 100px;
+        }
+
+        .legal-section {
+            padding: 35px 0;
+            border-bottom: 1px solid rgba(255,255,255,.06);
+        }
+
+        .legal-section:first-child {
+            padding-top: 0;
+        }
+
+        .legal-section:last-child {
+            border-bottom: none;
+        }
+
+        .legal-section h2 {
+            margin: 0 0 18px;
+
+            font-size: 24px;
+            line-height: 1.1;
+            letter-spacing: -.03em;
+            font-weight: 500;
+
+            color: #e7e8ee;
+        }
+
+        .legal-section p {
+            max-width: 760px;
+            margin: 0 0 16px;
+
+            font-size: 14px;
+            line-height: 1.9;
+
+            color: #858a96;
+        }
+
+        .legal-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section ul {
+            max-width: 760px;
+            margin: 0;
+            padding-left: 22px;
+
+            color: #858a96;
+        }
+
+        .legal-section li {
+            margin-bottom: 10px;
+
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .legal-section strong {
+            color: #c7c9d1;
+            font-weight: 500;
+        }
+
+        .legal-section a {
+            color: #a19aff;
+            text-decoration: none;
+        }
+
+        .legal-section a:hover {
+            color: #ffffff;
+        }
+
+        .legal-footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            padding: 20px 0;
+
+            border-top: 1px solid rgba(255,255,255,.08);
+
+            font-family: "DM Mono", monospace;
+            font-size: 9px;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+
+            color: #50545e;
+        }
+
+        @media (max-width: 700px) {
+
+            .legal-page {
+                padding: 15px;
+            }
+
+            .legal-header {
+                padding: 70px 0 55px;
+            }
+
+            .legal-content {
+                padding: 45px 0 70px;
+            }
+
+            .legal-section {
+                padding: 28px 0;
+            }
+
+            .legal-section h2 {
+                font-size: 21px;
+            }
+
+            .legal-section p,
+            .legal-section li {
+                font-size: 13px;
+            }
+
+            .legal-footer {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="legal-page">
+
+        <div class="legal-grid"></div>
+
+
+        <div class="legal-container">
+
+
+            <div class="legal-top">
+
+                <a href="index.html">
+                    ← VICTOR LABS
+                </a>
+
+                <span>
+                    LEGAL / 002
+                </span>
+
+            </div>
+
+
+            <header class="legal-header">
+
+                <div class="legal-label">
+                    VICTOR LABS / LEGAL
+                </div>
+
+                <h1>
+                    PRIVACY
+                    <span>POLICY.</span>
+                </h1>
+
+                <div class="legal-date">
+                    LAST UPDATED: OCTOBER 2026
+                </div>
+
+            </header>
+
+
+            <main class="legal-content">
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        01. Overview
+                    </h2>
+
+                    <p>
+                        Victor Labs respects your privacy and aims
+                        to be transparent about how information is
+                        handled when you visit this website.
+                    </p>
+
+                    <p>
+                        This Privacy Policy explains what information
+                        may be collected, how it may be used and the
+                        choices available to visitors.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        02. Information We Collect
+                    </h2>
+
+                    <p>
+                        Victor Labs is designed to operate with
+                        minimal collection of personal information.
+                    </p>
+
+                    <p>
+                        Information may be provided voluntarily when
+                        you contact Victor Labs by email or otherwise
+                        communicate with the site owner.
+                    </p>
+
+                    <p>
+                        Depending on how the website is used,
+                        technical information such as browser type,
+                        device information, approximate location,
+                        referring pages and general usage information
+                        may also be processed by hosting, analytics
+                        or security services.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        03. Agreement Storage
+                    </h2>
+
+                    <p>
+                        When you accept the Terms of Use and Privacy
+                        Policy, the website may store a small
+                        identifier in your browser using local
+                        storage.
+                    </p>
+
+                    <p>
+                        This allows Victor Labs to remember that you
+                        have already acknowledged the site's access
+                        agreement and prevents the agreement screen
+                        from appearing on every visit.
+                    </p>
+
+                    <p>
+                        This information is stored locally in your
+                        browser and is not intended to identify you
+                        personally.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        04. How Information May Be Used
+                    </h2>
+
+                    <p>
+                        Information that is voluntarily provided may
+                        be used to:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Respond to messages and enquiries.
+                        </li>
+
+                        <li>
+                            Maintain and improve the website.
+                        </li>
+
+                        <li>
+                            Protect the website against abuse,
+                            malicious activity and security threats.
+                        </li>
+
+                        <li>
+                            Understand general website usage and
+                            performance where applicable.
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        05. Cookies and Local Storage
+                    </h2>
+
+                    <p>
+                        Victor Labs may use browser storage
+                        technologies, including local storage, to
+                        provide website functionality.
+                    </p>
+
+                    <p>
+                        The current access agreement uses local
+                        storage to remember a visitor's agreement
+                        status.
+                    </p>
+
+                    <p>
+                        Third-party services used by the website may
+                        use their own cookies or similar technologies
+                        according to their respective policies.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        06. Third-Party Services
+                    </h2>
+
+                    <p>
+                        Victor Labs may rely on third-party services
+                        for hosting, fonts, deployment, security,
+                        search visibility or other website
+                        functionality.
+                    </p>
+
+                    <p>
+                        These services may process technical
+                        information according to their own privacy
+                        policies and terms.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        07. Email Communication
+                    </h2>
+
+                    <p>
+                        If you contact Victor Labs by email, the
+                        information contained in your message,
+                        including your email address and any details
+                        you choose to provide, may be retained as
+                        reasonably necessary to respond to your
+                        enquiry or maintain communication.
+                    </p>
+
+                    <p>
+                        Victor Labs does not intentionally request
+                        sensitive personal information through this
+                        website.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        08. Data Security
+                    </h2>
+
+                    <p>
+                        Reasonable measures may be used to protect
+                        information handled through the website and
+                        associated services.
+                    </p>
+
+                    <p>
+                        However, no method of transmitting or storing
+                        information over the internet can be
+                        guaranteed to be completely secure.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        09. Your Choices
+                    </h2>
+
+                    <p>
+                        You may control browser storage through your
+                        browser's settings and may clear locally
+                        stored website data at any time.
+                    </p>
+
+                    <p>
+                        If you have contacted Victor Labs and would
+                        like to ask about information associated with
+                        your communication, you may contact the site
+                        owner using the address below.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        10. Changes to This Policy
+                    </h2>
+
+                    <p>
+                        This Privacy Policy may be updated as the
+                        website, services or data practices change.
+                    </p>
+
+                    <p>
+                        The latest version will be published on this
+                        page together with its updated date.
+                    </p>
+
+                </section>
+
+
+                <section class="legal-section">
+
+                    <h2>
+                        11. Contact
+                    </h2>
+
+                    <p>
+                        Privacy-related questions can be sent to:
+                    </p>
+
+                    <p>
+                        <a href="mailto:victorchaloh802@gmail.com">
+                            victorchaloh802@gmail.com
+                        </a>
+                    </p>
+
+                </section>
+
+
+            </main>
+
+
+            <footer class="legal-footer">
+
+                <span>
+                    VICTOR LABS / PRIVACY POLICY
+                </span>
+
+                <span>
+                    © 2026 VICTOR LABS
+                </span>
+
+            </footer>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

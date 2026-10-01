@@ -46,17 +46,53 @@ let mouseY = window.innerHeight / 2;
 let glowX = mouseX;
 let glowY = mouseY;
 
+let cursorActive = false;
+
 document.addEventListener("mousemove", (event) => {
 
     mouseX = event.clientX;
     mouseY = event.clientY;
 
+    cursorActive = true;
+
     if (cursorDot) {
         cursorDot.style.left = `${mouseX}px`;
         cursorDot.style.top = `${mouseY}px`;
+        cursorDot.style.opacity = "1";
     }
 
 });
+
+
+document.addEventListener("mouseleave", () => {
+
+    cursorActive = false;
+
+    if (cursorDot) {
+        cursorDot.style.opacity = "1";
+    }
+
+    if (cursorGlow) {
+        cursorGlow.style.opacity = "1";
+    }
+
+});
+
+
+document.addEventListener("mouseenter", () => {
+
+    cursorActive = true;
+
+    if (cursorDot) {
+        cursorDot.style.opacity = "1";
+    }
+
+    if (cursorGlow) {
+        cursorGlow.style.opacity = "1";
+    }
+
+});
+
 
 function animateCursor() {
 
@@ -64,8 +100,11 @@ function animateCursor() {
     glowY += (mouseY - glowY) * 0.08;
 
     if (cursorGlow) {
+
         cursorGlow.style.left = `${glowX}px`;
         cursorGlow.style.top = `${glowY}px`;
+
+        cursorGlow.style.opacity = "1";
     }
 
     requestAnimationFrame(animateCursor);
@@ -1791,3 +1830,66 @@ document.addEventListener("keydown", event => {
     }
 
 });
+
+/* =========================================
+   VICTOR LABS — ACCESS AGREEMENT
+========================================= */
+
+const accessGate = document.getElementById("access-gate");
+const accessAgreement = document.getElementById("access-agreement");
+const accessEnter = document.getElementById("access-enter");
+
+const ACCESS_KEY = "victorLabsAccessAccepted";
+
+function checkAccessAgreement() {
+
+    if (!accessGate) return;
+
+    const accepted = localStorage.getItem(ACCESS_KEY);
+
+    if (accepted === "true") {
+
+        accessGate.classList.add("hidden");
+        accessGate.setAttribute("aria-hidden", "true");
+
+        document.body.classList.remove("access-locked");
+
+    } else {
+
+        accessGate.classList.remove("hidden");
+        accessGate.setAttribute("aria-hidden", "false");
+
+        document.body.classList.add("access-locked");
+
+    }
+
+}
+
+if (accessAgreement && accessEnter) {
+
+    accessAgreement.addEventListener("change", () => {
+
+        accessEnter.disabled = !accessAgreement.checked;
+
+    });
+
+
+    accessEnter.addEventListener("click", () => {
+
+        if (!accessAgreement.checked) return;
+
+        localStorage.setItem(
+            ACCESS_KEY,
+            "true"
+        );
+
+        accessGate.classList.add("hidden");
+        accessGate.setAttribute("aria-hidden", "true");
+
+        document.body.classList.remove("access-locked");
+
+    });
+
+}
+
+checkAccessAgreement();
