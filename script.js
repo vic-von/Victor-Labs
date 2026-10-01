@@ -717,34 +717,54 @@ const terminalCommands = {
 
     help: `
         <div class="terminal-response">
-            Available commands:
+            Victor Labs command interface.
         </div>
 
         <div class="terminal-command-list">
 
             <span>
                 <b>about</b>
-                — learn about the lab
+                — learn about Victor Labs
             </span>
 
             <span>
                 <b>projects</b>
-                — inspect experiments
+                — inspect current projects
             </span>
 
             <span>
                 <b>stack</b>
-                — view technologies
+                — view technologies and tools
+            </span>
+
+            <span>
+                <b>activity</b>
+                — view recent lab activity
+            </span>
+
+            <span>
+                <b>metrics</b>
+                — view lab metrics
+            </span>
+
+            <span>
+                <b>journal</b>
+                — view development notes
+            </span>
+
+            <span>
+                <b>github</b>
+                — view the source repository
             </span>
 
             <span>
                 <b>contact</b>
-                — start a conversation
+                — get contact information
             </span>
 
             <span>
                 <b>status</b>
-                — system information
+                — inspect current lab state
             </span>
 
             <span>
@@ -755,47 +775,268 @@ const terminalCommands = {
         </div>
     `,
 
+
     about: `
         <div class="terminal-response">
+
+            <strong>VICTOR LABS</strong><br><br>
+
             Victor Labs is an independent technology
-            lab focused on software, AI, automation,
-            experiments and digital systems.
+            laboratory focused on building software,
+            automation, web experiences and experimental
+            digital systems.
+
+            <br><br>
+
+            The lab is built around one principle:
+            <br>
+
+            <span class="terminal-muted">
+                build useful things, experiment often,
+                improve what already exists.
+            </span>
+
         </div>
     `,
+
 
     projects: `
         <div class="terminal-response">
-            03 active experiments found:
-            Future Systems / Automation / Digital Space
+
+            <strong>PROJECT REGISTRY</strong><br><br>
+
+            [01] FUTURE SYSTEMS<br>
+            Experimental software and digital systems.
+
+            <br><br>
+
+            [02] AUTOMATION<br>
+            Tools and workflows designed to reduce
+            repetitive work.
+
+            <br><br>
+
+            [03] DIGITAL SPACE<br>
+            Web interfaces and interactive digital
+            experiences.
+
+            <br><br>
+
+            <span class="terminal-muted">
+                More systems will be added as they are built.
+            </span>
+
         </div>
     `,
+
 
     stack: `
         <div class="terminal-response">
-            Current stack:
-            JavaScript / C++ / AI / Web / Automation
+
+            <strong>TECHNOLOGY STACK</strong><br><br>
+
+            WEB<br>
+            ├─ HTML5<br>
+            ├─ CSS3<br>
+            ├─ JavaScript<br>
+            └─ Responsive interfaces
+
+            <br><br>
+
+            PROGRAMMING<br>
+            ├─ C++<br>
+            └─ JavaScript
+
+            <br><br>
+
+            AI & AUTOMATION<br>
+            ├─ AI systems<br>
+            ├─ API integrations<br>
+            ├─ Workflow automation<br>
+            └─ Bot development
+
+            <br><br>
+
+            DEVELOPMENT<br>
+            ├─ Git<br>
+            ├─ GitHub<br>
+            ├─ Node.js<br>
+            └─ Command-line workflows
+
+            <br><br>
+
+            <span class="terminal-muted">
+                Stack evolves with each experiment.
+            </span>
+
         </div>
     `,
+
+
+    activity: `
+        <div class="terminal-response">
+
+            <strong>LAB ACTIVITY</strong><br><br>
+
+            [CURRENT] Victor Labs website<br>
+            Status: ACTIVE DEVELOPMENT
+
+            <br><br>
+
+            [RECENT] SEO infrastructure<br>
+            Sitemap and robots configuration added.
+
+            <br><br>
+
+            [RECENT] Search indexing<br>
+            Google Search Console connected.
+
+            <br><br>
+
+            [RECENT] Interface system<br>
+            Navigation, terminal and interactive
+            components refined.
+
+        </div>
+    `,
+
+
+    metrics: `
+        <div class="terminal-response">
+
+            <strong>LAB METRICS</strong><br><br>
+
+            PROJECTS ............ 03<br>
+            ACTIVE SYSTEMS ...... 01<br>
+            CORE LANGUAGES ...... 03+<br>
+            WEB TECHNOLOGIES .... 04+<br>
+            AUTOMATION .......... ACTIVE<br>
+            SOURCE CONTROL ...... GIT / GITHUB
+
+            <br><br>
+
+            <span class="terminal-muted">
+                Metrics represent the current state
+                of the public Victor Labs workspace.
+            </span>
+
+        </div>
+    `,
+
+
+    journal: `
+        <div class="terminal-response">
+
+            <strong>LAB JOURNAL</strong><br><br>
+
+            BUILD LOG / 001<br>
+            Victor Labs initialized as an independent
+            digital workspace.
+
+            <br><br>
+
+            BUILD LOG / 002<br>
+            Core website interface redesigned around
+            a technical laboratory concept.
+
+            <br><br>
+
+            BUILD LOG / 003<br>
+            SEO infrastructure, sitemap and search
+            indexing tools configured.
+
+            <br><br>
+
+            <span class="terminal-muted">
+                New entries will appear as the lab evolves.
+            </span>
+
+        </div>
+    `,
+
+
+    github: `
+        <div class="terminal-response">
+
+            <strong>GITHUB REPOSITORY</strong><br><br>
+
+            Repository<br>
+            └─ vic-von / Victor-Labs
+
+            <br><br>
+
+            Branch<br>
+            └─ main
+
+            <br><br>
+
+            Source<br>
+            └─ GitHub
+
+            <br><br>
+
+            <a
+                href="https://github.com/vic-von/Victor-Labs"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="terminal-link"
+            >
+                → OPEN REPOSITORY
+            </a>
+
+        </div>
+    `,
+
 
     contact: `
         <div class="terminal-response">
-            Email:
-            victorchaloh802j@gmail.com
+
+            <strong>CONTACT</strong><br><br>
+
+            Email<br>
+            └─ victorchaloh802@gmail.com
+
+            <br><br>
+
+            For collaborations, ideas, technical
+            discussions or project inquiries:
+
+            <br><br>
+
+            <a
+                href="mailto:victorchaloh802@gmail.com"
+                class="terminal-link"
+            >
+                → SEND MESSAGE
+            </a>
+
         </div>
     `,
 
+
     status: `
         <div class="terminal-response">
-            SYSTEM ............ ONLINE<br>
-            CORE .............. ACTIVE<br>
-            BUILD ............. 72%<br>
-            EXPERIMENTS ....... 03<br>
-            LAB ................ OPERATIONAL
+
+            <strong>VICTOR LABS / STATUS</strong><br><br>
+
+            INTERFACE .......... READY<br>
+            TERMINAL ........... READY<br>
+            WEBSITE ............ DEPLOYED<br>
+            SOURCE ............. GITHUB<br>
+            SEO ................. CONFIGURED<br>
+            INDEXING ........... PENDING<br>
+            DEVELOPMENT ........ ACTIVE
+
+            <br><br>
+
+            <span class="terminal-muted">
+                Last checked from the public lab interface.
+            </span>
+
         </div>
     `
 
 };
-
 
 function escapeHTML(value) {
 
@@ -1420,3 +1661,133 @@ console.log(
     "%c System online. Welcome to the lab.",
     "color:#858b99;"
 );
+
+/* =========================================
+   VICTOR LABS — JOURNAL VIEWER
+   ========================================= */
+
+const journalViewer = document.getElementById("journal-viewer");
+const journalViewerClose = document.getElementById("journal-viewer-close");
+const journalViewerBackdrop = document.querySelector(".journal-viewer-backdrop");
+
+const journalViewerLog = document.getElementById("journal-viewer-log");
+const journalViewerTitle = document.getElementById("journal-viewer-title");
+const journalViewerDate = document.getElementById("journal-viewer-date");
+const journalViewerText = document.getElementById("journal-viewer-text");
+
+const journalEntries = {
+    "003": {
+        log: "LOG / 003",
+        date: "SEP 2026",
+        title: "Building the Lab",
+        text: `
+            Victor Labs started as a simple portfolio and gradually
+            became something more deliberate — a dedicated workspace
+            for software, experiments and digital systems.
+
+            The goal was never to make another generic developer
+            portfolio. The idea was to create a space that feels like
+            an active laboratory: somewhere projects can be documented,
+            systems can be tested and new ideas can take shape.
+
+            The current interface is the foundation for that direction.
+            It will continue changing as new systems and experiments
+            are built.
+        `
+    },
+
+    "002": {
+        log: "LOG / 002",
+        date: "SEP 2026",
+        title: "Reworking the Interface",
+        text: `
+            The original interface was rebuilt around a darker,
+            more technical visual language.
+
+            Instead of filling the page with effects, the redesign
+            focuses on structure, typography, spacing and small
+            interactive details.
+
+            The terminal, activity log, project system and journal
+            were introduced to make the website feel less like a
+            static portfolio and more like an active technical
+            workspace.
+
+            Motion was kept restrained so the interface still feels
+            purposeful rather than overloaded.
+        `
+    },
+
+    "001": {
+        log: "LOG / 001",
+        date: "SEP 2026",
+        title: "First Deployment",
+        text: `
+            The first production version of Victor Labs was deployed
+            and connected to the project's GitHub workflow.
+
+            The deployment established the basic foundation for the
+            lab: source control through GitHub, production hosting
+            through Cloudflare Pages and a public web presence.
+
+            From there, the project moved beyond a simple first release
+            and became a system that could be continuously improved.
+        `
+    }
+};
+
+function openJournalEntry(logNumber) {
+
+    const entry = journalEntries[logNumber];
+
+    if (!entry || !journalViewer) return;
+
+    journalViewerLog.textContent = entry.log;
+    journalViewerTitle.textContent = entry.title;
+    journalViewerDate.textContent = entry.date;
+
+    journalViewerText.innerHTML = entry.text
+        .trim()
+        .split(/\n\s*\n/)
+        .map(paragraph => `<p>${paragraph.trim()}</p>`)
+        .join("");
+
+    journalViewer.classList.add("active");
+    journalViewer.setAttribute("aria-hidden", "false");
+
+    document.body.classList.add("journal-open-active");
+}
+
+function closeJournalEntry() {
+
+    if (!journalViewer) return;
+
+    journalViewer.classList.remove("active");
+    journalViewer.setAttribute("aria-hidden", "true");
+
+    document.body.classList.remove("journal-open-active");
+}
+
+document.querySelectorAll(".journal-entry").forEach(entry => {
+
+    entry.addEventListener("click", () => {
+        openJournalEntry(entry.dataset.journal);
+    });
+
+});
+
+if (journalViewerClose) {
+    journalViewerClose.addEventListener("click", closeJournalEntry);
+}
+
+if (journalViewerBackdrop) {
+    journalViewerBackdrop.addEventListener("click", closeJournalEntry);
+}
+
+document.addEventListener("keydown", event => {
+
+    if (event.key === "Escape") {
+        closeJournalEntry();
+    }
+
+});
